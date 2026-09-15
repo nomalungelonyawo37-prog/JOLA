@@ -1,2 +1,18 @@
 # JOLA
 Jozi Lava. Real App from Soweto
+name: jola_lava
+description: Jozi Lava Real App from Soweto
+publish_to: none
+version: 1.0.0+1
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^2.24.0
+  firebase_auth: ^4.12.0
+  cloud_firestore: ^4.15.0
+  firebase_storage: ^11.6.0
+  cupertino_icons: ^1.0.2
+flutter:
+  uses-material-design: true
