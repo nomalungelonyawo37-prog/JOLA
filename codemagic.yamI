@@ -1,0 +1,17 @@
+workflows:
+  default-workflow:
+    name: JOLA APK
+    max_build_duration: 20
+    instance_type: mac_mini_m2
+    environment:
+      flutter: stable
+    scripts:
+      - name: Create Android
+        script: |
+          flutter create . --platforms=android --project-name jola_lava --org com.jola.lava
+          flutter pub get
+      - name: Build APK
+        script: |
+          flutter build apk --release
+    artifacts:
+      - build/**/outputs/**/*.apk
